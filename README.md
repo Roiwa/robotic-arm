@@ -2,10 +2,10 @@
 
 ## Embedded Folder
 ### robotic-arm folder (copy its files to embedded and remove it)
-1. Cal.ino Folder
+#### 1. Cal.ino Folder
 This folder contains the arduino code for controlling the servos using the information received by UART from computer. The cal.ino file is a program made using Arduino IDE and its libraries for UART and servos. Very simple code, the mathematical processing its done inside the computer.
 
-2. calibration.py file (REWRITE)
+#### 2. calibration.py file (REWRITE)
 This file has two functionalities: 
     1) the calibration functionality moves link 2 to 90 degrees and link 1 to 0 degrees. The objective is to put each servo in that position so we can place the real links in the servo. Fig. (INSERT IMAGE) shows the position for a calibrated robotic arm where link1 must be parallel to the horizontal line, and link 2 must be perpendicular to link 1 and pointing out to the floor. This will allow to move the robotic arm in the first quadrant of the xy plane, being its origin (0,0) in the first joint (base joint) of link 1. 
 
@@ -13,7 +13,7 @@ This file has two functionalities:
     
     However, we should not confuse theoretical angles (to move the robotic arm in the xy plane) with servo angles. Servo angles depend on the physical position of servos. Servo 1 is pointing out in the opposite direction to servo 2, this means that their rotation is also inverted. So, when we indicate both servos to move to 10 degrees, servo 1 will move to an angle of 10 degrees according to the horizontal line; however, servo 2 (as it is place in opposite direction) will rotate to -10 degrees respect to its reference. Also, our configuration (CALIBRATION PICTURE) determines movement range of link 2, so when link 1 is lined up with link 2 and pointing out the same direction, we must put in the servo 0 degrees; otherwise, when link 1 is lined up with link 2 and pointing out the opposite direction will be 180 degrees.
 
-3. path_follower_any.py
+#### 3. path_follower_any.py
 In this program, the robotic arm follows a sequence of points (path). It shows the simulation of the movement of the robotic arm in a window as also moves the physical robotic arm. 
 
 To execute this program, you must set the configuration parameters:
@@ -22,7 +22,7 @@ To execute this program, you must set the configuration parameters:
 -   path (path of the robot: list of points)
 
 
-4. robotic_arm.py
+#### 4. robotic_arm.py
 This program allows us to control a physical robot while seeing in the computer screen a simulation of it in real-time.
 
 To execute this program, you must set the configuration parameters:

@@ -37,6 +37,7 @@ ax.grid(True, linestyle='--', alpha=0.5)
 # Create a ball
 radio = 0.25
 ball = plt.Circle((0, 0), radio, color='green')
+ball.radius
 ax.add_patch(ball)
 
 # Position and speed variables
